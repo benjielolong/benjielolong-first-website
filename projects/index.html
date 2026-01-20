@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raviel’s Kitchen — Spicy Condiments</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top announcement -->
+  <div class="topbar">
+    <p>🔥 Free delivery in select areas • Buy 2, save 10% • Freshly made weekly</p>
+  </div>
+
+  <!-- Navbar -->
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <span class="brand-mark">RK</span>
+        <span class="brand-text">Raviel’s Kitchen</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#why" class="nav-link">Why Us</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
+          🌙
+        </button>
+
+        <button class="cart-btn" id="cartBtn" aria-label="Cart">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="badge">Homemade • Spicy • Addictive</p>
+          <h1>Make every bite <span class="accent">louder</span>.</h1>
+          <p class="sub">
+            Premium Filipino condiments—spicy bagoong, chili garlic oil, and spicy suka.
+            Small-batch, bold flavor, no shortcuts.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#products">Shop Best Sellers</a>
+            <a class="btn ghost" href="#contact">Order via Message</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <p class="stat-num">10k+</p>
+              <p class="stat-label">Happy meals upgraded</p>
+            </div>
+            <div class="stat">
+              <p class="stat-num">4.9★</p>
+              <p class="stat-label">Avg customer rating</p>
+            </div>
+            <div class="stat">
+              <p class="stat-num">48h</p>
+              <p class="stat-label">Fresh batch cadence</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="product-shot" aria-hidden="true">
+            <div class="jar"></div>
+            <div class="jar-shadow"></div>
+          </div>
+
+          <div class="hero-card-info">
+            <h3>Bundle Deal</h3>
+            <p class="muted">Pick any 3 jars • Save 12%</p>
+            <div class="price-row">
+              <p class="price">₱299</p>
+              <p class="strike">₱339</p>
+            </div>
+            <button class="btn primary full" data-add="bundle">
+              Add Bundle to Cart
+            </button>
+            <p class="tiny muted">*Demo cart only — plug into your checkout later.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust bar -->
+    <section class="trust">
+      <div class="container trust-row">
+        <div class="trust-item">✅ No preservatives (small-batch)</div>
+        <div class="trust-item">✅ Sealed & hygienic packing</div>
+        <div class="trust-item">✅ Perfect for mango, rice, ulam</div>
+        <div class="trust-item">✅ COD / GCash friendly</div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Best Sellers</h2>
+            <p class="muted">Simple lineup. Serious flavor. Choose your weapon.</p>
+          </div>
+
+          <div class="filters" role="tablist" aria-label="Product filters">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="spicy">Spicy</button>
+            <button class="chip" data-filter="best">Best Seller</button>
+          </div>
+        </div>
+
+        <div class="grid cards" id="productGrid">
+          <!-- Card 1 -->
+          <article class="card" data-tags="best spicy">
+            <div class="card-img">
+              <span class="pill">Best Seller</span>
+              <div class="img-placeholder"></div>
+            </div>
+            <div class="card-body">
+              <h3>Spicy Bagoong</h3>
+              <p class="muted">Savory, spicy, “mangga’s best friend.”</p>
+              <div class="card-foot">
+                <p class="price">₱99</p>
+                <button class="btn small" data-add="Spicy Bagoong">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card" data-tags="best">
+            <div class="card-img">
+              <span class="pill">Best Seller</span>
+              <div class="img-placeholder"></div>
+            </div>
+            <div class="card-body">
+              <h3>Chili Garlic Oil</h3>
+              <p class="muted">Crispy bits + heat. Put it on everything.</p>
+              <div class="card-foot">
+                <p class="price">₱129</p>
+                <button class="btn small" data-add="Chili Garlic Oil">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card" data-tags="spicy">
+            <div class="card-img">
+              <span class="pill">Spicy</span>
+              <div class="img-placeholder"></div>
+            </div>
+            <div class="card-body">
+              <h3>Spicy Suka</h3>
+              <p class="muted">Vinegar with kick—sawsawan upgrade.</p>
+              <div class="card-foot">
+                <p class="price">₱79</p>
+                <button class="btn small" data-add="Spicy Suka">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card" data-tags="spicy">
+            <div class="card-img">
+              <span class="pill">Spicy</span>
+              <div class="img-placeholder"></div>
+            </div>
+            <div class="card-body">
+              <h3>Extra Hot Bagoong</h3>
+              <p class="muted">For brave people only. No refunds for tears.</p>
+              <div class="card-foot">
+                <p class="price">₱109</p>
+                <button class="btn small" data-add="Extra Hot Bagoong">Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="section alt" id="why">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Why customers come back</h2>
+            <p class="muted">Because once you taste real, you can’t un-taste it.</p>
+          </div>
+        </div>
+
+        <div class="grid features">
+          <div class="feature">
+            <div class="feature-ico">🥄</div>
+            <h3>Small batch quality</h3>
+            <p class="muted">Made in controlled batches for consistent flavor and freshness.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-ico">🌶️</div>
+            <h3>Balanced heat</h3>
+            <p class="muted">Spicy, not reckless. Flavor first—then the punch.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-ico">📦</div>
+            <h3>Secure packaging</h3>
+            <p class="muted">Sealed jars + careful wrap so your order arrives clean.</p>
+          </div>
+          <div class="feature">
+            <div class="feature-ico">💬</div>
+            <h3>Fast ordering</h3>
+            <p class="muted">Chat-based ordering supported. Quick replies, clear updates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>What people say</h2>
+            <p class="muted">Real cravings. Real messages. Real repeat buyers.</p>
+          </div>
+        </div>
+
+        <div class="grid reviews">
+          <figure class="quote">
+            <blockquote>“Yung bagoong… grabe. Naubos yung mangga ko in 10 minutes.”</blockquote>
+            <figcaption>— Mika, QC</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote>“Chili garlic oil is addictive. Lahat ng ulam naging masarap.”</blockquote>
+            <figcaption>— JR, Manila</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote>“Spicy suka hits different. Perfect sa fried food.”</blockquote>
+            <figcaption>— Ana, Pasig</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>FAQ</h2>
+            <p class="muted">Quick answers before you order.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-item" aria-expanded="false">
+            <span>How do I order?</span>
+            <span class="chev">⌄</span>
+          </button>
+          <div class="faq-panel">
+            Order via the contact form below, or message your page. Tell us: product, quantity, location, and payment method.
+          </div>
+
+          <button class="faq-item" aria-expanded="false">
+            <span>How long does delivery take?</span>
+            <span class="chev">⌄</span>
+          </button>
+          <div class="faq-panel">
+            Typically same-day to next-day depending on your area and rider availability.
+          </div>
+
+          <button class="faq-item" aria-expanded="false">
+            <span>What payments do you accept?</span>
+            <span class="chev">⌄</span>
+          </button>
+          <div class="faq-panel">
+            COD, GCash, and bank transfer—depending on your setup. (You can customize this.)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <h2>Order or ask a question</h2>
+            <p class="muted">Drop your details—this form validates and shows a success message (front-end only).</p>
+
+            <div class="contact-cards">
+              <div class="mini-card">
+                <p class="mini-title">Messenger</p>
+                <p class="muted">Reply time: fast</p>
+              </div>
+              <div class="mini-card">
+                <p class="mini-title">Delivery</p>
+                <p class="muted">Same-day possible</p>
+              </div>
+              <div class="mini-card">
+                <p class="mini-title">Bundles</p>
+                <p class="muted">Save more per jar</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="form" id="orderForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+              <small class="error" data-error="name"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="09xx xxx xxxx" required />
+              <small class="error" data-error="phone"></small>
+            </div>
+
+            <div class="field">
+              <label for="order">Order details</label>
+              <textarea id="order" name="order" rows="4" placeholder="e.g., Spicy Bagoong x2, Chili Garlic Oil x1" required></textarea>
+              <small class="error" data-error="order"></small>
+            </div>
+
+            <button class="btn primary full" type="submit">Send Order</button>
+            <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <p>© <span id="year"></span> Raviel’s Kitchen. All rights reserved.</p>
+      <a href="#home" class="to-top" id="toTop">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script src="projects/script.js"></script>
+</body>
+</html>
